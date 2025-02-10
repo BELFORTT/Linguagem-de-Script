@@ -1,0 +1,44 @@
+@host = https://gnpsrkxxkxxsqiydhalr.supabase.co
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImducHNya3h4a3h4c3FpeWRoYWxyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzkyMTIzMjMsImV4cCI6MjA1NDc4ODMyM30.DWaL4KKCd2Pqrntt_n4XWOAH1cqfJU5Gh73nQQdkJPY
+@id = 63e18f83-22cf-4389-b26f-5302df4a7863
+
+### GET
+GET https://viacep.com.br/ws/01001000/json/
+
+### GET
+GET {{host}}/rest/v1/investments?select=*
+apikey: {{token}}
+Authorization: Bearer SUPABASE_KEY
+
+### POST
+POST {{host}}/rest/v1/investments
+apikey: {{token}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+Prefer: return=minimal
+
+{
+    "name": "Tesouro Selic 2031",
+    "value": 100000,
+    "origin": "Tesouro Nacional",
+    "category": "Pós",
+    "interest": "150% Selic"
+}
+
+### PATCH
+PATCH {{host}}/rest/v1/investments?id=eq.{{id}}
+apikey: {{token}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+Prefer: return=minimal
+
+{
+    "interest": "99% Selic"
+}
+
+### DELETE
+DELETE {{host}}/rest/v1/investments?id=eq.{{id}}
+apikey: {{token}}
+Authorization: Bearer {{token}}
+
+
