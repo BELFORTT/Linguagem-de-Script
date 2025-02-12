@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Requisição Assíncrona</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        header h1 {
+            text-align: center;
+        }
+
+        main {
+            height: 100vh;   
+            display: flex;
+            justify-content: center;  /* Centraliza horizontalmente */
+            align-items: center;
+        }
+
+        section.conteiner {
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            width: 40%;
+            padding: 25px;
+        }
+
+        form div {
+            padding: 10px;
+        }
+
+        div input {
+            padding: 12px;
+            width: 450px;
+            margin: 5px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <section class="conteiner">
+            <h1>Address</h1>
+            <form>
+                <div>
+                    <input type="text" id="cep" placeholder="CEP">
+                    <p id="msg-cep"></p>
+                </div>
+                <div>
+                    <input type="text" id="rua" placeholder="Rua">
+                </div>
+                <div>
+                    <input type="text" id="numero" placeholder="Número">
+                </div>
+                <div>
+                    <input type="text" id="bairro" placeholder="Bairro">
+                </div>
+                <div>
+                    <input type="text" id="estado" placeholder="Estado">
+                </div>
+                <div>
+                    <input type="text" id="cidade" placeholder="Cidade">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <script src="Script.js"></script>
+</body>
+</html>
